@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  height: 100%;
+  background: hsl(226, 43%, 10%);
+  color: #fff;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  gap: 25px;
+  padding: 100px;
+  justify-content: center;
+}
+
+.card,
+.card-row-2 {
+  background: hsl(235, 46%, 20%);
+  height: 35vh;
+  border-radius: 15px;
+}
+
+.card-row-2 {
+  grid-row: span 2;
+  height: 100%;
+}
+
+.top-row {
+  background: hsl(246, 80%, 60%);
+  border-radius: 15px;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+.top-row img {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #ccc;
+  border-radius: 50%;
+}
+
+.top-row p {
+  margin-top: 30px;
+  font-size: 18px;
+  opacity: 0.5;
+}
+
+.top-row h1 {
+  font-size: 2.8rem;
+  margin-top: 10px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.bottom-row {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 23vh;
+}
+
+.bottom-row span,
+p {
+  margin: 10px 0;
+  font-size: 1.3rem;
+}
+
+.bottom-row span {
+  opacity: 0.5;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  height: 80%;
+  margin-top: auto;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  top: -25%;
+  z-index: -1;
+  left: 0;
+  height: 13vh;
+  border-radius: 15px 15px 5px 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.overlay img {
+  margin-top: 0;
+  height: 60px;
+  margin-left: auto;
+}
+
+.fx-ro-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spans {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.spans span {
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.card h1 {
+  font-size: 3rem;
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+.fx-ro-1 h1 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.card p {
+  font-size: 18px;
+  opacity: 0.5;
+  margin-top: 0;
+}

@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Epilogue", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+  padding: 0 80px;
+  z-index: 99999;
+}
+
+.nav-links {
+  margin-left: 35px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropDown {
+  position: relative;
+}
+
+.dropDownMenue {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  width: 150px;
+  height: 20vh;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+  top: 150%;
+  padding: 30px;
+  justify-content: space-between;
+  gap: 5px;
+  z-index: 9999999;
+}
+
+.dropDownItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropDownItem img {
+  height: 10px;
+}
+
+.dropDownItem span {
+  font-size: 10px;
+  opacity: 0.5;
+}
+
+.dropDown:hover .dropDownMenue {
+  display: flex;
+  z-index: 999999;
+}
+
+.dropDownMenue h1 {
+  font-size: 14px;
+}
+
+.nav-buttons {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-buttons button {
+  padding: 10px 25px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.nav-buttons button:nth-child(2) {
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 8px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.right {
+  width: 50%;
+  height: 80vh;
+}
+
+.right img {
+  width: 100%;
+  height: 100%;
+}
+
+.left {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding: 0 80px;
+  margin-top: auto;
+}
+
+.left h1 {
+  font-size: 4rem;
+  opacity: 0.8;
+  width: 90%;
+}
+
+.left p {
+  opacity: 0.5;
+  line-height: 1.6rem;
+  width: 80%;
+  margin: 30px 0;
+}
+
+.left button {
+  width: 30%;
+  padding: 15px 0;
+  background-color: #000;
+  color: #fff;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.images {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: auto;
+}

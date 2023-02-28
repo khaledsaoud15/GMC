@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+.navbar {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  height: 120px;
+  justify-content: space-between;
+  padding: 0 200px;
+  position: absolute;
+  width: 100%;
+}
+
+.links {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.link {
+  margin-left: 35px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.link a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.buttons button {
+  padding: 10px 25px;
+  border-radius: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.buttons button:nth-child(2) {
+  color: hsl(353, 100%, 62%);
+  background: #fff;
+}
+
+.header {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 0 100px;
+  background: url("../images/bg-pattern-intro-desktop.svg"),
+    linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  background-repeat: no-repeat;
+  background-position: 30% 50%;
+  color: #fff;
+}
+
+.header h1 {
+  margin: 10px 0;
+  font-size: 3rem;
+}
+
+.header p {
+  margin: 15px 0;
+}
+
+.buttons-header {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.buttons-header button {
+  padding: 10px 25px;
+  border-radius: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: hsl(353, 100%, 62%);
+  border: 1px solid #fff;
+  color: #fff;
+}
+.buttons-header button:nth-child(1) {
+  background: #fff;
+  color: hsl(353, 100%, 62%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  gap: 20%;
+}
+
+.container-text {
+  position: absolute;
+  left: 35%;
+  top: 20%;
+  font-size: 2.4rem;
+  color: hsl(208, 49%, 24%);
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  gap: 150px;
+}
+
+.right {
+  width: 50%;
+  margin-right: -15%;
+}
+
+.left {
+  width: 70%;
+  margin-left: 150px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+  color: hsl(207, 13%, 34%);
+}
+
+.card h1 {
+  color: hsl(208, 49%, 24%);
+}
+.card p {
+  font-size: 13px;
+  line-height: 1.3rem;
+  width: 80%;
+}
+
+.right-reverse {
+  width: 50%;
+  margin-left: -15%;
+}
+
+.left-reverse {
+  width: 60%;
+  margin-right: 150px;
+}
+
+.state {
+  display: flex;
+  align-items: center;
+  height: 50vh;
+  background-color: #3f4164fa;
+  background-image: url("../images/bg-pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-size: 50% 100vh;
+  background-position: -10% 100%;
+  justify-content: space-evenly;
+  border-radius: 0 100px 0 100px;
+  color: #fff;
+  margin: 100px 0 0 0;
+}
+
+.state-content {
+  width: 40%;
+}
+
+.state-content p {
+  font-size: 14px;
+  width: 80%;
+  line-height: 1.2rem;
+  margin-top: 15px;
+  opacity: 0.5;
+}

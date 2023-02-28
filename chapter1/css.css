@@ -1,0 +1,11 @@
+div {
+  background-color: #000;
+  width: 150px;
+  height: 150px;
+}
+
+.box2 {
+  margin-top: 25px;
+  padding-top: 50px;
+  border: 5px solid red;
+}

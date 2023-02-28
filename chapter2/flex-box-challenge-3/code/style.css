@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background: hsl(217, 54%, 11%);
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: hsl(216, 50%, 16%);
+  border-radius: 8px;
+  box-shadow: 0 0 30px hsl(215, 32%, 27%);
+}
+
+.img-cntr {
+  height: 40vh;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay {
+  display: none;
+}
+
+.img-cntr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container h1 {
+  font-size: 20px;
+  margin: 20px 0;
+  color: #fff;
+}
+
+.container p {
+  color: hsl(215, 51%, 70%);
+}
+
+.eth {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.left p {
+  color: #00fff7;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  position: relative;
+  margin-top: 20px;
+}
+
+.avatar::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #999;
+}
+
+.avatar img {
+  width: 40px;
+  height: 40px;
+}
+
+.img-cntr:hover .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00fff769;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-cntr:hover .overlay img {
+  width: 50px;
+  height: 50px;
+}
+
+.avatar p span {
+  color: #fff;
+  margin-right: 5px;
+}
+
+.container h1:hover,
+.avatar p span:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
+@media (max-width: 830px) {
+  .container {
+    width: 50%;
+    height: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    width: 80%;
+    height: 70%;
+  }
+}
