@@ -1,0 +1,17 @@
+.box {
+  width: 400px;
+  height: 400px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+@media all and (max-width: 900px) {
+  .box {
+    background: #eace45;
+    width: 200px;
+    height: 200px;
+  }
+}
