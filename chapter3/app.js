@@ -630,3 +630,145 @@ function checkDoubleO(copmanies) {
 }
 
 console.log(checkDoubleO(itCompanies));
+
+function removeMiddle(itcompanies) {
+  let newArr = [];
+
+  for (let i = 0; i < itcompanies.length; i++) {
+    if (itcompanies[i] !== itcompanies[Math.floor(itcompanies.length / 2)]) {
+      newArr.push(itcompanies[i]);
+    }
+  }
+
+  return newArr;
+}
+
+console.log(removeMiddle(itCompanies));
+
+/*
+Write a function that takes a list of strings as an argument and returns a filtered list containing the same elements but with the 'geese' removed.
+The geese are any strings in the following array, which is pre-populated in your solution:
+  ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+For example, if this array were passed as an argument:
+ ["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]
+Your function would return the following array:
+["Mallard", "Hook Bill", "Crested", "Blue Swedish"]
+The elements in the returned array should be in the same order as in the initial array passed to your function, albeit with the 'geese' removed. Note that all of the strings will be in the same case as those provided, and some elements may be repeated.
+*/
+
+function filterGeese(birds) {
+  const geese = [
+    "African",
+    "Roman Tufted",
+    "Toulouse",
+    "Pilgrim",
+    "Steinbacher",
+  ];
+  // let newBirds = [];
+  // for (let i = 0; i < birds.length; i++) {
+  //   if (!geese.includes(birds[i])) {
+  //     newBirds.push(birds[i]);
+  //   }
+  // }
+  // return newBirds;
+  return birds.filter((b) => !geese.includes(b));
+}
+
+console.log(
+  filterGeese([
+    "Mallard",
+    "Hook Bill",
+    "African",
+    "Crested",
+    "Pilgrim",
+    "Toulouse",
+    "Blue Swedish",
+  ])
+);
+
+let resultt = ["SS", "SS", "SS", "Ss"];
+
+function checkKJa(res) {
+  for (let i = 0; i < res.length; i++) {
+    for (let j = 0; j < res.length; j++) {
+      if (res[i] !== res[j]) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+console.log(checkKJa(["SS", "SS", "SS", "Ss"]));
+console.log(checkKJa(["&&", "&", "&&&", "&&&&"]));
+console.log(checkKJa(["abc", "abc", "abc", "abc"]));
+
+// Define a function that removes duplicates from an array of numbers and returns it as a result.
+
+// The order of the sequence has to stay the same.
+
+function removeDuplicates(arr) {
+  let newAr = [];
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr.indexOf(arr[i]), i);
+    if (arr.indexOf(arr[i]) === i) {
+      newAr.push(arr[i]);
+    }
+  }
+  return newAr;
+}
+
+console.log(removeDuplicates([1, 1, 2, 4, 2, 3, 3, 4, 4]));
+
+// Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
+
+// Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
+
+// If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
+
+// Examples
+// "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
+// "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
+// ""  -->  ""
+
+function sortString(str) {
+  if (str.length === 0) {
+    return "";
+  }
+
+  str = str.split(" ");
+  const sortedWords = [];
+
+  for (let i = 1; i <= str.length; i++) {
+    for (let j = 0; j < str.length; j++) {
+      if (str[j].includes(i)) {
+        sortedWords.push(str[j]);
+        break;
+      }
+    }
+  }
+
+  return sortedWords.join(" ");
+}
+
+console.log(sortString("is2 Thi1s T4est 3a"));
+
+/*
+A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+
+Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+*/
+
+function isPangram(string) {
+  let strArr = string.toLowerCase();
+  let alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+  for (let i = 0; i < alphabet.length; i++) {
+    if (strArr.indexOf(alphabet[i]) < 0) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(isPangram("The quick brown fox jumps over the lazy dog"));
+console.log(isPangram("his is not a panagram"));
