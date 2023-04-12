@@ -963,3 +963,43 @@ function findMaxSkills(users) {
 }
 
 console.log(findMaxSkills(users));
+
+function getLoggedInUsersAndPoints(users) {
+  const userArr = [];
+  let count = 0;
+  for (let user in users) {
+    if (users[user].isLoggedIn && users[user].points >= 50) {
+      count++;
+      userArr.push({
+        user: users[user],
+      });
+    }
+  }
+  return userArr;
+}
+
+console.log(getLoggedInUsersAndPoints(users));
+
+// loop
+// Condition
+// users[user].skills.includes()
+// MERN stack
+
+function cehckMernUser(users) {
+  const MERN = ["MongoDB", "Express", "React", "Node"];
+  let u = [];
+  for (let user in users) {
+    if (
+      users[user].skills.includes("MongoDB") &&
+      users[user].skills.includes("React") &&
+      users[user].skills.includes("Node") &&
+      users[user].skills.includes("Express")
+    ) {
+      u.push(users[user]);
+    }
+  }
+
+  return u;
+}
+
+console.log(cehckMernUser(users));
